@@ -1,6 +1,7 @@
 import base64
 import json
 
+# how to parse JWT and read specific fields
 
 def main():
     jwt = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzbWFydHBvcyIsImdydCI6WyJwb3M6c3RhdHVzIiwicG9zOmNvbmZpZ3VyYXRpb24iLCJtYnVzOnBvcy5wYXltZW50LnB1c2giLCJwb3M6ZmluYWxpemUtb3JkZXIiLCJvcmRlcnM6Y3JlYXRlIl0sIm1pZCI6MTAwMTAwMSwiaWF0IjoxNzEwNTE0MjMxLCJqdGkiOiI3OTk0NiIsInRpZCI6IjAwMDAwME5uIiwic2lkIjo5MTI3OX0.QI1iPp9T1Uuh8QnhblLfT-3_gX0EqakNBT4pKMrorG4"
