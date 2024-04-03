@@ -1,4 +1,5 @@
 import base64
+import json
 
 
 def main():
@@ -11,14 +12,22 @@ def main():
 
     header = decode_base64(parts[0])
     payload = decode_base64(parts[1])
+    tid = parse_tid(payload)
 
     print("Header:", header)
     print("Payload:", payload)
+    print("Tenant ID:", tid)
 
 
 def decode_base64(encoded_string):
     decoded_bytes = base64.urlsafe_b64decode(encoded_string + "==")
     return decoded_bytes.decode("utf-8")
+
+
+def parse_tid(payload):
+    payload_dict = json.loads(payload)
+    tid = payload_dict.get("tid")
+    return tid
 
 
 if __name__ == "__main__":
